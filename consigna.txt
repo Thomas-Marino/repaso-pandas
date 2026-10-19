@@ -1,0 +1,21 @@
+Ejercicio 1. Limpieza y análisis de datos (20 puntos)
+Formatec Solutions recibe información de distintos dispositivos que monitorean el consumo eléctrico de sus instalaciones. Los registros pueden contener espacios innecesarios y valores numéricos almacenados como texto.
+
+Punto A — Limpieza de registros (10 puntos)
+
+Desarrollá la función limpiar_registro(registro) que reciba un diccionario con los datos de un dispositivo, por ejemplo:
+{    "dispositivo": "  SENSOR-01  ",    "consumo": "150",    "sector": ""}
+
+
+La función debe retornar un nuevo diccionario que cumpla con las siguientes condiciones:
+- El nombre del dispositivo debe quedar sin espacios al principio ni al final.
+- El consumo debe convertirse a un número de tipo float.
+- Si el sector está vacío, debe asignarse el valor "Sin asignar".
+Punto B — Resumen de consumos (10 puntos)
+
+Desarrollá la función generar_resumen(lista_registros, limite) que reciba una lista de registros previamente limpiados y un límite de consumo.
+
+La función debe retornar una tupla con:
+1. Una lista con los nombres de los dispositivos cuyo consumo sea mayor al límite.
+2. El consumo promedio de todos los dispositivos.
+Incluí un bloque principal que cree tres registros de ejemplo, los limpie, genere el resumen e imprima los resultados.
